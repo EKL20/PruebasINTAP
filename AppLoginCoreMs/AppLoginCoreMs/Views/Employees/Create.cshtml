@@ -1,0 +1,37 @@
+﻿@model AppLoginCoreMs.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="text-center">
+    <h1>Crear Empleado</h1>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="name" class="control-label"></label>
+                    <input asp-for="name" class="form-control" />
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dni" class="control-label"></label>
+                    <input asp-for="dni" class="form-control" />
+                    <span asp-validation-for="dni" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Crear" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-dark" asp-action="Index">Regresar</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
