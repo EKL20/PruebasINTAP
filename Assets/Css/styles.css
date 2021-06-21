@@ -1,0 +1,22 @@
+/* styles excersice One */
+.wd {
+  width: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb {
+  margin-bottom: 15px;
+}
+
+.text-error {
+  color: red;
+}
+
+/* Styles excersice Two */
+.align-col {
+  display: flex;
+  flex-direction: column;
+}
